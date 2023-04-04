@@ -18,8 +18,17 @@ import Outroduce from "@/components/Outroduce";
 import useKeyBoard from "@/hooks/useKeyBoard";
 
 export default function Home() {
-  const { first, pagination, button1, button2, button3, button4, up, down } =
-    useKeyBoard();
+  const {
+    first,
+    pagination,
+    button1,
+    button2,
+    button3,
+    button4,
+    up,
+    down,
+    goToPage,
+  } = useKeyBoard();
 
   return (
     <BackGround>
@@ -33,7 +42,7 @@ export default function Home() {
           down={down}
         />
 
-        <Pagination page={pagination} />
+        <Pagination page={pagination} goToPage={goToPage} />
 
         <Glow click={down} />
 

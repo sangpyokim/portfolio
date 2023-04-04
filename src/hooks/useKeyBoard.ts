@@ -12,20 +12,35 @@ const useKeyBoard = () => {
   const [button3, setButton3] = useState(false);
   const [button4, setButton4] = useState(false);
 
-  const down = () => {
+  const down = (num: number = 1) => {
     setFirst((prev: any) => {
       if (prev / window.innerHeight <= -MAX_PAGES) return prev;
-      return prev - window.innerHeight;
-    });
-    setPagination((prev) => prev + 1);
-  };
-  const up = () => {
-    setFirst((prev: any) => {
-      if (prev === 0) return prev;
 
-      return prev + window.innerHeight;
+      return prev - window.innerHeight * num;
     });
-    setPagination((prev) => prev - 1);
+    setPagination((prev) => {
+      if (prev >= MAX_PAGES) return prev;
+      return prev + 1 * num;
+    });
+  };
+  const up = (num: number = 1) => {
+    setFirst((prev: any) => {
+      if (prev >= 0) return prev;
+
+      return prev + window.innerHeight * num;
+    });
+
+    setPagination((prev) => {
+      if (prev <= 0) return prev;
+      return prev - 1 * num;
+    });
+  };
+
+  const goToPage = (num: number) => {
+    console.log(num);
+    setFirst(-(window.innerHeight * num));
+
+    setPagination(num);
   };
 
   const onKeyDownHandler = (e: string) => {
@@ -72,6 +87,7 @@ const useKeyBoard = () => {
     button4,
     up,
     down,
+    goToPage,
   };
 };
 

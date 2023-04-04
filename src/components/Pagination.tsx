@@ -3,15 +3,18 @@ import styled, { keyframes } from "styled-components";
 
 import { MAX_PAGES } from "../constants";
 
-const Pagination = ({ page }: any) => {
-  console.log(page);
+const colors = ["#ffff00", "#76ff03", "#f06292", "#4fc3f7", "#ba68c8"];
+
+const Pagination = ({ page, goToPage }: any) => {
   return (
     <Container>
       <ItemContainer>
         {Array(MAX_PAGES + 1)
           .fill(0)
           .map((v, i) => (
-            <Item key={i} isPage={page === i}></Item>
+            <ItemWrapper key={i} onClick={() => goToPage(i)}>
+              <Item isPage={page === i} colors={colors[i]} />
+            </ItemWrapper>
           ))}
       </ItemContainer>
     </Container>
@@ -26,7 +29,7 @@ const Container = styled.div`
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
-  width: 120px;
+  width: 100px;
   height: 500px;
 
   display: flex;
@@ -42,42 +45,26 @@ const ItemContainer = styled.div`
   width: 100%;
   height: 200px;
 `;
+const ItemWrapper = styled.div`
+  width: 30px;
+  height: 30px;
 
-const Item = styled.div<{ isPage: boolean }>`
+  &:hover {
+    cursor: pointer;
+    & > div {
+      scale: 1;
+      transition: all 0.1s ease-in-out;
+    }
+  }
+`;
+
+const Item = styled.div<{ isPage: boolean; colors: string }>`
   background-color: white;
   width: 20px;
   height: 20px;
   border-radius: 50%;
 
   scale: ${(props) => (props.isPage ? "1" : "0.3")};
-
-  &:nth-child(1) {
-    background: #ffff00;
-    box-shadow: 0 0 30px #ffff00;
-  }
-  &:nth-child(2) {
-    background: #76ff03;
-    box-shadow: 0 0 30px #76ff03;
-  }
-  &:nth-child(3) {
-    background: #f06292;
-    box-shadow: 0 0 30px #f06292;
-  }
-  &:nth-child(4) {
-    background: #4fc3f7;
-    box-shadow: 0 0 30px #4fc3f7;
-  }
-  &:nth-child(5) {
-    background: #ba68c8;
-    box-shadow: 0 0 30px #ba68c8;
-  }
-`;
-
-const grow = keyframes`
-  0% , 40% , 100% {
-    transform:scale(0.2);
-  }
-  20% {
-    transform:scale(1);
-  }
+  background: ${(props) => props.colors};
+  box-shadow: 0 0 30px ${(props) => props.colors};
 `;
