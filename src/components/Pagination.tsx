@@ -26,16 +26,21 @@ export default Pagination;
 const Container = styled.div`
   color: black;
   position: fixed;
-  right: 20px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
-  width: 100px;
+  width: 40px;
   height: 500px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
 `;
 const ItemContainer = styled.div`
   display: flex;

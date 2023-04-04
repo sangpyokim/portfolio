@@ -1,7 +1,11 @@
 .container {
   line-height: 16px;
-  width: 33vw;
+  max-width: 600px;
   color: white;
+}
+.swiper_slide {
+  padding: 0 16px;
+  line-height: 1.2rem;
 }
 .swiper_container_wrapper__timeline .swiper_slide {
   display: flex;
@@ -57,70 +61,30 @@
 .swiper_container_wrapper__timeline .swiper_pagination_custom {
   position: relative;
   list-style: none;
-  margin: 1rem 0;
   padding: 0;
   display: flex;
-  line-height: 1.66;
-  bottom: 0;
   z-index: 11;
-  width: 75%;
+  width: 100%;
   display: flex;
 }
-.swiper_container_wrapper__timeline
-  .swiper_pagination_custom
-  .swiper_pagination_switch {
-  position: relative;
+.swiper_container_wrapper__timeline .swiper_pagination_switch {
   width: 100%;
-  height: 30px;
-  line-height: 30px;
   display: block;
   right: 0;
-  transform: translateX(50%);
 }
-.swiper_container_wrapper__timeline
-  .swiper_pagination_custom
-  .swiper_pagination_switch
-  .switch_title {
-  position: absolute;
+.swiper_container_wrapper__timeline .swiper_pagination_switch .switch_title {
   font-weight: 400;
-  right: 0;
-  transform: translateX(25%);
   transition: 0.2s all ease-in-out;
   transition-delay: 0s;
   cursor: pointer;
   z-index: 1;
 }
-/* .swiper_container_wrapper__timeline
-  .swiper_pagination_custom
-  .swiper_pagination_switch
-  .switch_title:after {
-  position: absolute;
-  top: calc(100% + 19px);
-  right: 50%;
-  transform: translateX(50%) translateY(-50%);
-  width: 12px;
-  height: 12px;
-  background: #000;
-  border-radius: 2rem;
-  content: "";
-  transition: 0.2s all ease-in-out;
-  transition-delay: 0s;
-  z-index: 1;
-} */
+
 .swiper_container_wrapper__timeline
   .swiper_pagination_custom
   .swiper_pagination_switch.active
   .switch_title {
   font-weight: 400;
-  transition-delay: 0.4s;
-}
-.swiper_container_wrapper__timeline
-  .swiper_pagination_custom
-  .swiper_pagination_switch.active
-  .switch_title:after {
-  background: #000;
-  width: 25px;
-  height: 25px;
   transition-delay: 0.4s;
 }
 .swiper_container_wrapper__timeline

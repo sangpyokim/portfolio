@@ -7,12 +7,12 @@ import BOJIcon from "../icons/BOJIcon";
 
 const Introduce = () => {
   return (
-    <div className="flex h-full flex-col items-start justify-center text-white">
+    <Container className="flex h-full flex-col items-start justify-center text-white">
       <div className=" text-whit my-2 text-base font-medium ">sangpyo kim</div>
-      <div className="mb-1 bg-slate-900 p-1 text-4xl font-medium text-slate-50 ">
+      <div className="mb-1 bg-slate-900 p-1  font-medium text-slate-50 ">
         동료들과 지식 공유, 적극적인 소통, 활발한 자기개발
       </div>
-      <div className=" mb-2 text-left text-4xl font-medium">
+      <div className=" mb-2 text-left  font-medium">
         세 가지를 핵심가치로 생각합니다.
       </div>
       <div className=" text-xl font-medium">김상표</div>{" "}
@@ -54,12 +54,21 @@ const Introduce = () => {
           <LeetCodeIcon width="1.5rem" height="1.5rem" />
         </Icon>
       </Icons>
-    </div>
+    </Container>
   );
 };
 
 export default Introduce;
 
+const Container = styled.div`
+  line-height: 2.25rem;
+  font-size: 2rem;
+  @media only screen and (max-width: 600px) {
+    line-height: 1.75rem;
+    font-size: 1.25rem;
+    text-align: start;
+  }
+`;
 const Icons = styled.div`
   display: flex;
   align-items: center;

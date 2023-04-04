@@ -57,6 +57,8 @@ const ConTainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 600px;
+  padding: 0 12px;
 `;
 
 const Icons = styled.div`
@@ -86,11 +88,22 @@ const Icon = styled.div<{ color: string }>`
       scale: 1.05;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    height: 3rem;
+    width: 3rem;
+
+    & > * {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
 `;
-const Content = styled.pre`
+const Content = styled.div`
   display: flex;
   justify-content: center;
   line-height: 18px;
+  max-width: 650px;
   height: 10rem;
   word-wrap: break-word;
 `;

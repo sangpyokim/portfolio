@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  width: calc(100vw - 40px);
   z-index: 0;
 }
 
@@ -52,13 +52,13 @@
   padding: 0.35em 1em;
   border-radius: 0.45em;
   background: none;
-  perspective: 2em;
+  perspective: 2rem;
 
   position: absolute;
-  top: 7rem;
+  top: 7%;
 
   font-family: "Raleway", sans-serif;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 900;
   letter-spacing: 1em;
 
