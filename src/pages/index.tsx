@@ -28,10 +28,17 @@ export default function Home() {
     up,
     down,
     goToPage,
+    touchStartHandler,
+    touchMoveHandler,
+    touchEndHandler,
   } = useKeyBoard();
 
   return (
-    <BackGround>
+    <BackGround
+      touchStartHandler={touchStartHandler}
+      touchMoveHandler={touchMoveHandler}
+      touchEndHandler={touchEndHandler}
+    >
       <Scroll first={first}>
         <GlowKeyBoard
           button1={button1}

@@ -12,6 +12,9 @@ const useKeyBoard = () => {
   const [button3, setButton3] = useState(false);
   const [button4, setButton4] = useState(false);
 
+  const [touchY, setTouchY] = useState(0);
+  const [touchY2, setTouchY2] = useState(0);
+
   const down = (num: number = 1) => {
     setFirst((prev: any) => {
       if (prev / window.innerHeight <= -MAX_PAGES) return prev;
@@ -37,7 +40,6 @@ const useKeyBoard = () => {
   };
 
   const goToPage = (num: number) => {
-    console.log(num);
     setFirst(-(window.innerHeight * num));
 
     setPagination(num);
@@ -66,13 +68,37 @@ const useKeyBoard = () => {
     else if (e === "ArrowUp" || e === "KeyW") setButton1(false);
   };
 
+  const onWheelHandler = (e: number) => {
+    if (e > 0) {
+      onKeyDownHandler("KeyS");
+    } else if (e < 0) {
+      onKeyDownHandler("KeyW");
+    }
+  };
+
+  const touchStartHandler = (y: number) => {
+    setTouchY(y);
+  };
+  const touchMoveHandler = (y: number) => {
+    setTouchY2(y);
+  };
+  const touchEndHandler = () => {
+    const minus = touchY - touchY2;
+
+    if (minus > -30) onKeyDownHandler("KeyS");
+    else if (minus < 30) onKeyDownHandler("KeyW");
+  };
+
   useEffect(() => {
     window.addEventListener("keydown", (e) => onKeyDownHandler(e.code));
     window.addEventListener("keyup", (e) => onKeyUpHandler(e.code));
 
+    window.addEventListener("wheel", (e) => onWheelHandler(e.deltaY));
+
     return () => {
       window.removeEventListener("keydown", (e) => onKeyDownHandler(e.code));
       window.removeEventListener("keyup", (e) => onKeyUpHandler(e.code));
+      window.removeEventListener("wheel", (e) => onWheelHandler(e.deltaY));
     };
   }, []);
 
@@ -88,6 +114,9 @@ const useKeyBoard = () => {
     up,
     down,
     goToPage,
+    touchStartHandler,
+    touchMoveHandler,
+    touchEndHandler,
   };
 };
 
