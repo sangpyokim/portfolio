@@ -18,27 +18,27 @@ const Skill = () => {
   return (
     <ConTainer>
       <Icons>
-        <Icon color={"#38BDF8"} onMouseEnter={() => onClickHandler(1)}>
+        <Icon color={"#38BDF8"} onClick={() => onClickHandler(1)}>
           <ReactIcon height="3rem" width="3rem" />
         </Icon>
 
-        <Icon color="#252525" onMouseEnter={() => onClickHandler(2)}>
+        <Icon color="#252525" onClick={() => onClickHandler(2)}>
           <NextjsIcon height="3rem" width="3rem" />
         </Icon>
 
-        <Icon color="#F73F51" onMouseEnter={() => onClickHandler(3)}>
+        <Icon color="#F73F51" onClick={() => onClickHandler(3)}>
           <ReactQueryIcon height="3rem" width="3rem" />
         </Icon>
 
-        <Icon color="#3578E5" onMouseEnter={() => onClickHandler(4)}>
+        <Icon color="#3578E5" onClick={() => onClickHandler(4)}>
           <Recoil height="3rem" width="3rem" />
         </Icon>
 
-        <Icon color="#363636" onMouseEnter={() => onClickHandler(5)}>
+        <Icon color="#363636" onClick={() => onClickHandler(5)}>
           <StyledComponentsIcon height="3rem" width="3rem" />
         </Icon>
 
-        <Icon color="#38BDF8" onMouseEnter={() => onClickHandler(6)}>
+        <Icon color="#38BDF8" onClick={() => onClickHandler(6)}>
           <TailwindIcon height="3rem" width="3rem" />
         </Icon>
       </Icons>

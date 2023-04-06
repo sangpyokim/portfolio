@@ -13,27 +13,13 @@ const GlowKeyBoard = ({
   return (
     <div className="keyBoardContainer">
       <div className="keyBoardRow">
-        <button onClick={up} className={button1 ? "key onclick-active" : "key"}>
-          ↑
-        </button>
+        <button className={button1 ? "key onclick-active" : "key"}>↑</button>
       </div>
 
       <div className="keyBoardRow">
-        <button onClick={up} className={button2 ? "key onclick-active" : "key"}>
-          ←
-        </button>
-        <button
-          onClick={down}
-          className={button3 ? "key onclick-active" : "key"}
-        >
-          ↓
-        </button>
-        <button
-          onClick={down}
-          className={button4 ? "key onclick-active" : "key"}
-        >
-          →
-        </button>
+        <button className={button2 ? "key onclick-active" : "key"}>←</button>
+        <button className={button3 ? "key onclick-active" : "key"}>↓</button>
+        <button className={button4 ? "key onclick-active" : "key"}>→</button>
       </div>
     </div>
   );

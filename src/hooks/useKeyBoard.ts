@@ -15,6 +15,8 @@ const useKeyBoard = () => {
   const [touchY, setTouchY] = useState(0);
   const [touchY2, setTouchY2] = useState(0);
 
+  let isScroll = false;
+
   const down = (num: number = 1) => {
     setFirst((prev: any) => {
       if (prev / window.innerHeight <= -MAX_PAGES) return prev;
@@ -69,11 +71,23 @@ const useKeyBoard = () => {
   };
 
   const onWheelHandler = (e: number) => {
+    if (isScroll) return;
+
+    scrollHandler();
+
     if (e > 0) {
       onKeyDownHandler("KeyS");
+      setTimeout(() => onKeyUpHandler("KeyS"), 100);
     } else if (e < 0) {
       onKeyDownHandler("KeyW");
+      setTimeout(() => onKeyUpHandler("KeyW"), 100);
     }
+  };
+  const scrollHandler = () => {
+    isScroll = true;
+    setTimeout(() => {
+      isScroll = false;
+    }, 300);
   };
 
   const touchStartHandler = (y: number) => {
@@ -98,7 +112,7 @@ const useKeyBoard = () => {
     return () => {
       window.removeEventListener("keydown", (e) => onKeyDownHandler(e.code));
       window.removeEventListener("keyup", (e) => onKeyUpHandler(e.code));
-      window.removeEventListener("wheel", (e) => onWheelHandler(e.deltaY));
+      // window.removeEventListener("wheel", (e) => onWheelHandler(e.deltaY));
     };
   }, []);
 
