@@ -16,9 +16,9 @@ const Introduce = () => {
         세 가지를 핵심가치로 생각합니다.
       </div>
       <div className=" text-xl font-medium">김상표</div>{" "}
-      <div className=" text-base font-medium">
+      {/* <div className=" text-base font-medium">
         순천대학교 컴퓨터공학과 졸업 (편입)
-      </div>
+      </div> */}
       <Icons>
         <Icon
           color="#252525"

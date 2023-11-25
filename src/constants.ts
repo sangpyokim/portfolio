@@ -5,14 +5,6 @@ export const images = [
   },
   {
     original:
-      "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.00.20.png?alt=media&token=d7004630-f879-4d11-b230-7e60cabbe64c",
-  },
-  {
-    original:
-      "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.00.31.png?alt=media&token=6131ff29-6b02-4024-beb3-9e92fdb5a277",
-  },
-  {
-    original:
       "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.00.36.png?alt=media&token=f5e3ed4f-0d69-4c91-afec-a4e745baffd2",
   },
   {
@@ -22,10 +14,6 @@ export const images = [
   {
     original:
       "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.00.44.png?alt=media&token=72246903-a3f6-41cb-b444-82ff9526b0c3",
-  },
-  {
-    original:
-      "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.00.47.png?alt=media&token=4e3a3bce-7447-4843-b82e-b68c0aa228c9",
   },
   {
     original:
@@ -50,6 +38,16 @@ export const images = [
   {
     original:
       "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/image%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-04%2017.01.53.png?alt=media&token=ef561b94-a8a8-40a0-9980-715529f05f1b",
+  },
+  {
+    // 폴더 구조
+    original:
+      "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/projectImage%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-07%2000.11.19.png?alt=media&token=33e37d04-e2ee-4bd3-9fca-ddfdcbb4e04d",
+  },
+  {
+    // 데이터베이스 구조
+    original:
+      "https://firebasestorage.googleapis.com/v0/b/workout-21c5f.appspot.com/o/projectImage%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA%202023-04-07%2000.12.32.png?alt=media&token=f046ce53-ef66-4038-b96d-7b5996086c8f",
   },
 ];
 export const skillStack = [
@@ -112,4 +110,4 @@ export const skillDes = [
   `,
 ];
 
-export const MAX_PAGES = 4;
+export const MAX_PAGES = 3;

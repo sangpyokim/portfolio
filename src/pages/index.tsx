@@ -65,9 +65,9 @@ export default function Home() {
           <Projects />
         </Section>
 
-        <Section title="대외활동">
+        {/* <Section title="대외활동">
           <Outroduce />
-        </Section>
+        </Section> */}
       </Scroll>
     </BackGround>
   );

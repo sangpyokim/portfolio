@@ -8,10 +8,6 @@ import VercelIcon from "../icons/VercelIon";
 import PlayStoreIcon from "../icons/PlayStoreIcon";
 import { colors, images, skillStack } from "@/constants";
 
-const data = [
-  `  
-`,
-];
 // 깃허브 아이콘
 // 안드로이드, 웹 배포 아이콘
 
@@ -69,7 +65,7 @@ const Projects = () => {
         ))}
       </Stacks>
       <Description>
-        <div>Work Out 개인프로젝트 (23.01 ~ 23.03)</div>
+        <div>Work Out 개인프로젝트 (23.01 ~ 23.04)</div>
         <div>
           자신의 타이머 사용기록을 남들과 공유하여 동기부여를 받는 서비스
           타이머를 사용하고 통계를 확인하고 그룹에 가입하여 소통하며 자신의
@@ -88,7 +84,7 @@ const Container = styled.div`
   align-items: center;
   line-height: 18px;
   color: white;
-  max-width: 600px;
+  max-width: 920px;
 `;
 
 const GalleryContainer = styled.div`
